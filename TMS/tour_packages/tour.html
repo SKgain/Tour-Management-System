@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour Packages</title>
+
+    <!-- Custom Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-image: url('assets/bg.jpeg'); /* Change this to your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white; /* Optional: makes text easier to read on dark backgrounds */
+        }
+
+      /*    For filter section*/
+        .rotate {
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+        }
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"> Dynamic Tour Group</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item btn btn-outline-secondary mx-2 my-2"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item btn btn-outline-secondary mx-2 my-2"><a class="nav-link" href="../Tour_Store/index.html">Store</a></li>
+                <li class="nav-item btn btn-outline-secondary mx-2 my-2"><a class="nav-link active" href="./tour.html">Tour</a></li>
+                <li class="nav-item btn btn-outline-secondary mx-2 my-2"><a class="nav-link" href="../user/login.html">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Filter Section-->
+<div class="container mt-4">
+    <div class="row justify-content-end">
+        <div class="col-auto">
+            <div class="dropdown">
+                <button id="typeDropdown" class="btn btn-secondary  d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Type <i class="fas fa-angle-left ms-2 rotate-icon " id="typeIcon"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Day</a></li>
+                    <li><a class="dropdown-item" href="#">Long</a></li>
+                    <li><a class="dropdown-item" href="#">Day long</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <div class="dropdown">
+                <button id="typeDropdown2"  class="btn btn-secondary  d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                    Destination <i class="fas fa-angle-left ms-2" id="typeIcon2" ></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Sundarban</a></li>
+                    <li><a class="dropdown-item" href="#">Cox Bazar</a></li>
+                    <li><a class="dropdown-item" href="#">Srimongol</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-primary"><i class="fas fa-search text-primary"></i></span>
+                <input type="text" class="form-control border-primary" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <button class="btn btn-success">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Hero Section -->
+<section class="hero mt-5">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-auto text-center">
+                <p class="fs-1 fw-bolder shadow p-3 mb-1 rounded">Tour Packages</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg">
+                    <img src="assets/Srimongol.jpg" class="card-img-top" alt="Srimongol">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Srimongol Tour</h5>
+                        <hr>
+                        <p class="card-text text-center">
+                            Discover the tea capital of Bangladesh with serene hills and lush green plantations.
+                        </p>
+                        <div class="mt-auto d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="fs-6 bg-primary-subtle fw-bold shadow px-3 py-1 rounded">10000৳</span>
+                            <span class="fs-6 bg-success-subtle fw-bold shadow px-3 py-1 rounded">Long</span>
+                            <a href="Srimongol/srimongol_more.html" class="btn bg-info-subtle fw-bold shadow px-3 py-1 rounded">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg">
+                    <img src="assets/Sundarban.jpg" class="card-img-top" alt="Sundarban">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Sundarban Tour</h5>
+                        <hr>
+                        <p class="card-text text-center">
+                            Explore the world's largest mangrove forest and spot the majestic Royal Bengal Tiger.
+                        </p>
+                        <div class="mt-auto d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="fs-6 bg-primary-subtle fw-bold shadow px-3 py-1 rounded">10000৳</span>
+                            <span class="fs-6 bg-success-subtle fw-bold shadow px-3 py-1 rounded">Day</span>
+                            <a href="Sundarbon/sundarban_more.html" class="btn bg-info-subtle fw-bold shadow px-3 py-1 rounded">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Card 3-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg">
+                    <img src="assets/Zaflong.jpg" class="card-img-top" alt="Zaflong">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Zaflong Tour</h5>
+                        <hr>
+                        <p class="card-text text-center">
+                            Enjoy river views, stone quarries, and scenic hills in this tranquil Sylhet getaway.
+                        </p>
+                        <div class="mt-auto d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="fs-6 bg-primary-subtle fw-bold shadow px-3 py-1 rounded">8500৳</span>
+                            <span class="fs-6 bg-success-subtle fw-bold shadow px-3 py-1 rounded">Long</span>
+                            <a href="Zaflong/zaflong_more.html" class="btn bg-info-subtle fw-bold shadow px-3 py-1 rounded">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!--Card 4-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg">
+                    <img src="assets/TanguarHaor.jpg" class="card-img-top" alt="Tanguar Haor">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Tanguar Haor Tour</h5>
+                        <hr>
+                        <p class="card-text text-center">
+                            Cruise through crystal-clear wetlands teeming with birds and natural beauty.
+                        </p>
+                        <div class="mt-auto d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="fs-6 bg-primary-subtle fw-bold shadow px-3 py-1 rounded">9500৳</span>
+                            <span class="fs-6 bg-success-subtle fw-bold shadow px-3 py-1 rounded">Long</span>
+                            <a href="Tangure/tanguarHour_more.html" class="btn bg-info-subtle fw-bold shadow px-3 py-1 rounded">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Bootstrap JS Bundle (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Optional Custom JS -->
+<script>
+
+    console.log("Page loaded");
+</script>
+<!-- Js for filter section-->
+<script>
+    const typeDropdown = document.getElementById('typeDropdown');
+    const typeIcon = document.getElementById('typeIcon');
+
+    typeDropdown.addEventListener('click', function () {
+        setTimeout(() => {
+            const expanded = typeDropdown.getAttribute('aria-expanded') === 'true';
+            typeIcon.classList.toggle('rotate', expanded);
+        }, 100); // small delay to let Bootstrap toggle aria-expanded
+    });
+</script>
+<script>
+    const typeDropdown2 = document.getElementById('typeDropdown2');
+    const typeIcon2 = document.getElementById('typeIcon2');
+
+    typeDropdown2.addEventListener('click', function () {
+        setTimeout(() => {
+            const expanded = typeDropdown2.getAttribute('aria-expanded') === 'true';
+            typeIcon2.classList.toggle('rotate', expanded);
+        }, 100); // small delay to let Bootstrap toggle aria-expanded
+    });
+</script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 mt-5">
+    <div class="container text-center text-md-start">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5><i class="fas fa-rocket me-2"></i>About Us</h5>
+                <p>Dynamic Tour Group offers expertly curated travel experiences across Bangladesh, combining adventure, comfort, and local culture for unforgettable journeys.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Store</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Tour</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Profile</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-4 mb-3">
+                <h5>Follow Us</h5>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center py-3 bg-secondary mt-3">
+        © 2025 Dynamic Tour Group. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>
